@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #div{
+        text-align: center;
+        float: left;
+    }
+    canvas {
+        float: left;
+        border: 5px solid black;
+        text-align: center;
+        margin-top:0px ;
+        margin-left: 0px;
+        background-image:url("backgroud.jpg") ;
+    }
+    button:hover{
+        background-color: red;
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="500"></canvas>
+<div id="div">
+    <h1>game khủng long ăn thịt</h1>
+    <button onclick="star()">star</button>
+    <button onclick="End()">end</button>
+</div>
+<audio src="Tieng-khung-long-gam-www_tiengdong_com.mp3" loop autoplay class="audio"></audio>
+<audio src="Am-thanh-that-vong-www_tiengdong_com.mp3"  autoplay class="audio1"></audio>
+
+<script src="game.js"></script>
+</body>
+</html>
