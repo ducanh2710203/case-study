@@ -3,7 +3,7 @@ var context = canvas.getContext('2d');
 const audio = document.querySelector(".audio");
 const audio1 = document.querySelector(".audio1");
 const audio3 = document.querySelector(".audio2");
-
+let isLose;
 
 let dino = new Dino(100, 100, 70, 90)
 let food = new Food(400, 400, 50, 50)
@@ -23,9 +23,13 @@ function update() {
         let yMouse = e.clientY;
         dino.x = xMouse - (dino.width / 2) - 270
         dino.y = yMouse - (dino.height / 2)
-
-
+        if(!isLose){
+            context.fillStyle = 'red';
+            context.font = '20px Arial';
+            context.fillText("you lose", 470, 50)
+        }
     })
+
 
     if (bom1.x < dino.x) {
         bom1.x += 2;
@@ -63,10 +67,13 @@ function update() {
         food.y = Math.random() * (canvas.height - food.height);
     }
     if (dino.x < bom1.x + bom1.width && dino.x + dino.width > bom1.x && dino.y < bom1.y + bom1.height && dino.y + dino.height > bom1.y) {
-
-        end()
-        alert("bạn đã thua")
         clearInterval(set)
+        isLose = false;
+
+        // location.reload();
+
+        // context.strokeText("game over",500, 50)
+        // clearInterval(set)
         audio.pause()
         audio1.play()
     }
@@ -112,12 +119,12 @@ function update() {
 
 // update()
 
-var set
+
 
 function star() {
     // alert("di chuyển khung long của bạn để ăn thịt và đừng để quả bom đuổi")
     audio.play();
-
+    isLose = true;
     update()
     myScore = 0
     yourScore = 0
@@ -137,6 +144,7 @@ function End() {
     audio3.pause()
     clearInterval(set)
 }
+
 
 
 
