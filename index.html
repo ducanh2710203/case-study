@@ -5,15 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dinosaur game eats meat</title>
 </head>
 <style>
-    #div{
+
+    body{
+        color: firebrick;
         text-align: center;
-        float: right;
+        font-weight: bold;
+        /*float: right;*/
+        font-family: "MingLiU-ExtB";
+        background-image: url("backgroudWin1.jpg");
+    }
+    button{
+        color: firebrick;
+        background-color: silver;
+        text-align: center;
+        font-weight: bold;
     }
     canvas {
-        float: left;
+        /*float: left;*/
         border: 5px solid black;
         text-align: center;
         margin-top:0px ;
@@ -32,7 +43,9 @@
     <h1>game khủng long ăn thịt</h1>
     <button onclick="star()">star</button>
     <button onclick="End()">end</button>
-
+</div>
+<div class="div2">
+    <h2>di chuyển khủng long của bạn để ăn thịt và đừng để bị quả bom đuổi</h2>
 </div>
 <audio src="Tieng-khung-long-gam-www_tiengdong_com.mp3" loop autoplay class="audio"></audio>
 <audio src="Am-thanh-that-vong-www_tiengdong_com.mp3"  autoplay class="audio1"></audio>
