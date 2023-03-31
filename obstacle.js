@@ -1,4 +1,4 @@
-class Food {
+class Obstacle{
     constructor(x, y, width, height) {
         this.x = x
         this.y = y
@@ -7,14 +7,13 @@ class Food {
         this.canvas = document.getElementById('canvas');
         this.context = this.canvas.getContext('2d');
     }
-     drawFood() {
+    drawObstacle(bom1,srcImg) {
         let img = new Image()
         img.onload = () => {
             this.context.drawImage(img, this.x, this.y, this.width, this.height)
 
         }
-        img.src = "thit.png"
+        img.src = srcImg
+
     }
-
-
 }
