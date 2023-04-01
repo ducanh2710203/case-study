@@ -7,15 +7,12 @@ class Obstacle {
         this.canvas = document.getElementById('canvas');
         this.context = this.canvas.getContext('2d');
     }
-
     drawObstacle(bom1, srcImg) {
         let img = new Image()
         img.onload = () => {
             this.context.drawImage(img, this.x, this.y, this.width, this.height)
-
         }
         img.src = srcImg
-
     }
     chasebomb(){
         if (this.x < dino.x) {
@@ -49,7 +46,6 @@ class Obstacle {
         }
     }
     bombhitsthemaincharacter(){
-
         if (dino.x < this.x + this.width && dino.x + dino.width > this.x && dino.y < this.y + this.height && dino.y + dino.height > this.y) {
             clearInterval(set)
             isLose = false;

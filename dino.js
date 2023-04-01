@@ -7,12 +7,10 @@ class Dino {
         this.canvas = document.getElementById('canvas');
         this.context = this.canvas.getContext('2d');
     }
-
     drawDino() {
         let img = new Image()
         img.onload = () => {
             this.context.drawImage(img, this.x, this.y, this.width, this.height)
-
         }
         img.src = "khủng long.png"
     }
@@ -23,5 +21,4 @@ class Dino {
             food.y = Math.random() * (canvas.height - food.height);
         }
     }
-
 }

@@ -25,6 +25,11 @@ function update() {
             context.fillText("you lose", 470, 50)
         }
     })
+    context.clearRect(0, 0, canvas.width, canvas.height)
+    bom1.drawObstacle(bom1, "bom.png");
+    dino1.drawObstacle(dino1, "dino1.png");
+    dino.drawDino();
+    food.drawFood();
     // bom đuổi nhân vật
     bom1.chasebomb()
     //đối thú đuổi thịt
@@ -35,12 +40,6 @@ function update() {
     dino1.eatfood()
     // bọm chạm nhân vật
     bom1.bombhitsthemaincharacter();
-
-    context.clearRect(0, 0, canvas.width, canvas.height)
-    bom1.drawObstacle(bom1, "bom.png");
-    dino1.drawObstacle(dino1, "dino1.png");
-    dino.drawDino();
-    food.drawFood();
     if (myScore < 10) {
     } else {
         context.clearRect(0, 0, canvas.width, canvas.height)
@@ -68,7 +67,6 @@ function update() {
     context.font = '20px fantasy';
     context.fillText('your Score: ' + yourScore, 870, 30);
 }
-
 function star() {
     audio.play();
     isLose = true;
@@ -82,9 +80,7 @@ function star() {
     bom1.y = Math.random() * (canvas.height - bom1.height);
     dino1.x = Math.random() * (canvas.width - dino1.width);
     dino1.y = Math.random() * (canvas.height - dino1.height);
-
 }
-
 function End() {
     context.clearRect(0, 0, canvas.width, canvas.height)
     audio.pause()
