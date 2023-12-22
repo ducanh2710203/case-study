@@ -48,6 +48,8 @@ function star() {
 function End() {
     audio.pause()
     audio1.pause()
-    audio3.pause()
+    audio3.pause() 
+    myScore = 0
+    yourScore = 0
     clearInterval(set)
 }
